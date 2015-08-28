@@ -1,3 +1,5 @@
+require 'ruby_intro'
+
 describe 'Ruby intro part 1' do
   describe "#sum" do
     it "should be defined" do
