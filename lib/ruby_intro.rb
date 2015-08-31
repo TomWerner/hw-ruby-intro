@@ -59,6 +59,8 @@ end
 # Part 3
 
 class BookInStock
+  attr_accessor :isbn, :price
+  
   def initialize(isbn, price)
     raise ArgumentError, 'ISBN cannot be empty string' unless isbn.length > 0
     raise ArgumentError, 'Price cannot be negative or free' unless price > 0
@@ -68,21 +70,5 @@ class BookInStock
   
   def price_as_string
     return "$%.2f" % [@price]
-  end
-  
-  def isbn
-    return @isbn
-  end
-  
-  def isbn=(new_isbn)
-    @isbn = new_isbn
-  end
-  
-  def price
-    return @price
-  end
-  
-  def price=(new_price)
-    @price = new_price
   end
 end
