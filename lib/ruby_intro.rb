@@ -14,7 +14,7 @@ def max_2_sum arr
   elsif (arr.length == 1)
     return arr.at(0)
   else
-    return sum(arr.sort.drop(arr.length - 2))
+    return sum(arr.sort.last(2))
   end
 end
 
